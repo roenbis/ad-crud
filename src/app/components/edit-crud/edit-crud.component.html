@@ -1,0 +1,22 @@
+<div *ngIf="crud">
+  <h2>{{ crud.name }}</h2>
+  <div>
+    Name:
+    <input [(ngModel)]="crud.name" placeholder="Name" />
+  </div>
+  <div>
+    Firstname:
+    <input [(ngModel)]="crud.firstName" placeholder="Firstname" />
+  </div>
+  <div>
+    Lastname:
+    <input [(ngModel)]="crud.lastName" placeholder="Lastname" />
+  </div>
+  <div>
+    Place:
+    <input [(ngModel)]="crud.place" placeholder="Place" />
+  </div>
+  <button (click)="updateCrud(crud)" *ngIf="crud.id">Save</button>
+  <button (click)="deleteCrud(crud)" *ngIf="crud.id">Delete</button>
+  <button (click)="createCrud(crud)" *ngIf="!crud.id">Create</button>
+</div>
